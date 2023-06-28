@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap"
+    rel="stylesheet"
+  />
+  <body>
+    <div class="Wrapper">
+      <h1>Password Generator</h1>
+
+      <div class="displayContainer">
+        <input
+          readonly
+          placeholder="Password"
+          class="display"
+          data-passwordDisplay
+        />
+
+        <button class="copy-btn" data-copy>
+          <span data-message class="tooltip"></span>
+          <img class="copy-btn-img" src="assets/copy.svg" alt="copyText" />
+        </button>
+      </div>
+
+      <div class="input-container">
+        <div class="length-container">
+          <p>Password Length</p>
+          <div class="Pass-length" data-lengthNumber>0</div>
+        </div>
+
+        <!-- slider  -->
+        <input type="range" min="1" max="20" step="1" class="slider" />
+
+        <!-- check boxes -->
+        <div class="check">
+          <input type="checkbox" class="uppercase" />
+          <label for="uppercase">Includes Uppercase Letters</label>
+        </div>
+        <div class="check">
+          <input type="checkbox" class="lowercase" />
+          <label for="lowercase">Includes Lowercase Letters</label>
+        </div>
+        <div class="check">
+          <input type="checkbox" class="numbers" />
+          <label for="numbers">Includes Numbers</label>
+        </div>
+        <div class="check">
+          <input type="checkbox" class="symbols" />
+          <label for="symbols">Includes Symbols</label>
+        </div>
+
+        <!-- strength container  -->
+        <div class="strength-container">
+          <p>strength</p>
+          <div class="strength-indicator"></div>
+        </div>
+
+        <!-- Generate Password button  -->
+        <button class="generate-password">Generate Password</button>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/38bcff064b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
